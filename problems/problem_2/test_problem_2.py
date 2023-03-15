@@ -12,7 +12,6 @@ class Problem2Tests(TestCase):
         root = [5, 1, 4, None, None, 3, 6]
         root = self.convert_list_to_tree(root, 0)
         self.assertFalse(validate_tree(root))
-        self.fail('x')
 
     def test_scenario_all_one_value(self):
         root = [5, 5, 5, 5, 5]
