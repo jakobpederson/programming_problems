@@ -1,5 +1,6 @@
 from unittest import TestCase
-from problems.problem_2.solution.solution_problem_2 import validate_tree, TreeNode
+from problems.utils.tree_node import TreeNode
+from problems.problem_2.solution.solution_problem_2 import validate_tree
 
 
 class Problem2Tests(TestCase):
