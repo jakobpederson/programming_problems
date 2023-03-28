@@ -12,3 +12,17 @@ class Problem4Tests(TestCase):
         result = zig_zag_level_order(root)
         expected = [[3], [20, 9], [15, 7]]
         self.assertEqual(expected, result)
+
+    def test_convert_list_with_one_node(self):
+        data = [1]
+        root = convert_list_to_tree_node(data, 0)
+        result = zig_zag_level_order(root)
+        expected = [[1]]
+        self.assertEqual(expected, result)
+
+    def test_convert_list_with_no_nodes(self):
+        data = []
+        root = convert_list_to_tree_node(data, 0)
+        result = zig_zag_level_order(root)
+        expected = []
+        self.assertEqual(expected, result)
