@@ -27,3 +27,22 @@ class Problem3Tests(TestCase):
         self.assertEqual(6, root.right.left.val)
         self.assertEqual(7, root.right.right.val)
         self.assertEqual(8, root.left.left.left.val)
+
+    def test_convert(self):
+        #            3
+        #         9     20
+        #            15     7
+        #                20  21
+        data = [3, 9, 20, None, None, 15, 7, 20, 21]
+        root = convert_list_to_tree_node(data, 0)
+        self.assertEqual(3, root.val)
+        self.assertEqual(9, root.left.val)
+        self.assertEqual(20, root.right.val)
+        self.assertEqual(None, root.left.left)
+        self.assertEqual(None, root.left.right)
+        self.assertEqual(15, root.right.left.val)
+        self.assertEqual(20, root.right.left.left.val)
+        self.assertEqual(21, root.right.left.right.val)
+        self.assertEqual(7, root.right.right.val)
+        self.assertEqual(None, root.right.right.left)
+        self.assertEqual(None, root.right.right.right)

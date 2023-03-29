@@ -13,6 +13,7 @@ def zig_zag_level_order(root):
         return d
 
     add(root, d, 0)
+    print(f"{d=}")
     for key, val in d.items():
         if key % 2 == 0:
             res.append(val)
